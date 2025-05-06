@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/cloudvendor")
 
-public class CloudAPIService {
+public class CloudVendorAPIService {
 
   CloudVendor cloudVendor;
 
