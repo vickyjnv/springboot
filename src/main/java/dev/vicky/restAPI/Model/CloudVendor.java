@@ -1,6 +1,4 @@
 package dev.vicky.restAPI.Model;
-
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,12 +12,18 @@ public class CloudVendor {
   private String vendorAddress;
   private String vendorPhoneNumber;
 
+  public CloudVendor(){
+
+  }
+
   public CloudVendor(String vendorId, String vendorName, String vendorAddress, String vendorPhoneNumber) {
     this.vendorId = vendorId;
     this.vendorName = vendorName;
     this.vendorAddress = vendorAddress;
     this.vendorPhoneNumber = vendorPhoneNumber;
   }
+
+
   public String getVendorAddress() {
     return vendorAddress;
   }
