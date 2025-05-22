@@ -1,8 +1,14 @@
 spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false
+#    username: root
+#    password: 1234
+
+
   datasource:
-    url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false
-    username: root
-    password: 1234
+    url: jdbc:mysql://sql12.freesqldatabase.com:3306/sql12780529?useSSL=false
+    username: sql12780529
+    password: CHfSHY5XnI
 
 
 #jpa settings
