@@ -1,7 +1,10 @@
 package dev.vicky.restAPI.controller;
 
 import dev.vicky.restAPI.Model.CloudVendor;
+import dev.vicky.restAPI.response.ResponseHandler;
 import dev.vicky.restAPI.service.CloudVendorService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,8 +23,9 @@ public class CloudVendorController {
 
 
   @GetMapping("{vendorId}")
-  public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
-    return cloudVendorService.getCloudVendor(vendorId );
+  public ResponseEntity<Object> getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
+    return ResponseHandler.responseBuilder("Requested Vendor Details are given here", HttpStatus.OK, cloudVendorService.getCloudVendor(vendorId));
+
   }
   @GetMapping()
   public List<CloudVendor> getAllCloudVendorDetails(){
