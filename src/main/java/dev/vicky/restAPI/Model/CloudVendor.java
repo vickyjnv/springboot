@@ -1,12 +1,17 @@
 package dev.vicky.restAPI.Model;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="cloud_vendor_info")
+@ApiModel(description = "This table holds cloud vendor information")
 public class CloudVendor {
   @Id
+  @ApiModelProperty(notes = "This is a cloud vendor id. It shall be given")
   private String vendorId;
   private String vendorName;
   private String vendorAddress;

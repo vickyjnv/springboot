@@ -3,6 +3,7 @@ package dev.vicky.restAPI.controller;
 import dev.vicky.restAPI.Model.CloudVendor;
 import dev.vicky.restAPI.response.ResponseHandler;
 import dev.vicky.restAPI.service.CloudVendorService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class CloudVendorController {
 
 
   @GetMapping("{vendorId}")
+  @ApiOperation(value="cloud vendor Id",notes = "Provide cloud vendor details",response = ResponseEntity.class)
   public ResponseEntity<Object> getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
     return ResponseHandler.responseBuilder("Requested Vendor Details are given here", HttpStatus.OK, cloudVendorService.getCloudVendor(vendorId));
 

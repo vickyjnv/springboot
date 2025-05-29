@@ -4,7 +4,9 @@ spring:
     username: root
     password: 1234
 
-
+mvc:
+  pathmatch:
+    matching-strategy: ant_path_matcher
 #  datasource:
 #    url: jdbc:mysql://sql12.freesqldatabase.com:3306/sql12780529?useSSL=false
 #    username: sql12780529
